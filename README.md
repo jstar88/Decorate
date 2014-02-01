@@ -31,7 +31,7 @@ Usage it's pretty easy: require the main class
  Where
  
  * ```$function``` is the callable function to intercept
- * ```$newFunction``` is the callable function that will be called before the other one
+ * ```$newFunction``` is the callable function that will be called before the other one.Note that the arguments of this function are the same of ```$function```, in this way you have all the things usefull to build your interceptor-logic
  * the method return a ```FunctionEmulator``` class
  
 ### onAfter
@@ -43,7 +43,7 @@ Usage it's pretty easy: require the main class
 Where
  
  * ```$function``` is the callable function
- * ```$newFunction``` is the callable function that will be called after the other one
+ * ```$newFunction``` is the callable function that will be called after the other one.Note that the argument of this function is just the return of the other function
  * the method return a ```FunctionEmulator``` class
  
 ### the return: FunctionEmulator
@@ -55,6 +55,6 @@ Not only,it's a object where inside are stored the original function and the new
 * ```getPreReturn()```: this function can be called with how many arguments you want and they are the same arguments of your main function to call.  
 It will return the original function return.
 
-* ```getParent()```: this function will return the original function or older FunctionEmulator
+* ```getParent()```: this function will return the original function or older FunctionEmulator. In this way you can iterate on the history and find all the result of aggregated functions. 
 
 
