@@ -26,7 +26,7 @@
 
 abstract class Decorate
 {
-    static $cache = false;
+    public static $cache = false;
     public static function onBefore($function, $newFunction)
     {
         return new OnBeforeFunctionEmulator($function, $newFunction);
