@@ -11,7 +11,7 @@ The decorator patter can easly make your application modular while functions tra
 
 The goal of this class is to decorate functions, taking advantage of objects to make a queue-like structure and store in it partial results and functions.
 
-Note that with the other my class https://github.com/jstar88/Editable it can show you a full dynamic decorated system usefull, for example, for a plugin system 
+Note that with the other my class https://github.com/jstar88/Editable it can show you a full dynamic decorated system usefull, for example, for a plugin system or to build a modular application.
 
 
 ## Usage
