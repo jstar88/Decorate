@@ -59,4 +59,31 @@ It will return the original function return.
 
 * ```getParent()```: this function will return the original function or older FunctionEmulator. In this way you can iterate on the history and find all the result of aggregated functions. 
 
+## Advanced usage
 
+If have you noticed that functions aggregations can be represented and easily manipulated by a LinkedList, then you got it!  
+I provide two implementations of LikedList:
+ 
+ * ```OnAfterDecorativeLinkedList```
+ * ```OnBeforeDecorativeLinkedList```
+These classes extends the standard PHP ```SplDoublyLinkedList``` so you can add,replace,move etc functions as API say.  
+Also ,implementing the ```FunctionEmulable``` interface they can be called as functions.  
+An example:
+
+```php
+    require '../../Decorate.php';
+
+    $a = new OnAfterDecorativeLinkedList();
+    $a->push(function(){ echo 1;});
+    $a->push(function(){ echo 2;});
+    $a->push(function(){ echo 3;});
+    $a(); // print 123
+
+    echo '<br>';
+
+    $a = new OnBeforeDecorativeLinkedList();
+    $a->push(function(){ echo 1;});
+    $a->push(function(){ echo 2;});
+    $a->push(function(){ echo 3;});
+    $a();  // print 321
+    ```
