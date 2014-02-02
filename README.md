@@ -62,13 +62,14 @@ It will return the original function return.
 ## Advanced usage
 
 If have you noticed that functions aggregations can be represented and easily manipulated by a LinkedList, then you got it!  
-I provide two implementations of LikedList:
+I provide two implementations of LikedList:  
  
  * ```OnAfterDecorativeLinkedList```
  * ```OnBeforeDecorativeLinkedList```
+
 These classes extends the standard PHP ```SplDoublyLinkedList``` so you can add,replace,move etc functions as API say.  
 Also ,implementing the ```FunctionEmulable``` interface they can be called as functions.  
-An example:
+An example:  
 
 ```php
     require '../../Decorate.php';
